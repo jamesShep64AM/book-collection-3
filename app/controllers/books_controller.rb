@@ -8,6 +8,7 @@ class BooksController < ApplicationController
 
   # GET /books/1 or /books/1.json
   def show
+    @book = Book.find(params[:id])
   end
 
   # GET /books/new
@@ -17,22 +18,20 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
+    @book = Book.find(params[:id])
   end
 
   # POST /books or /books.json
   def create
     @book = Book.new(book_params)
 
-    respond_to do |format|
       if @book.save
-        format.html { redirect_to books_path, notice: "Book was successfully created." }
-        format.json { render :show, status: :created, location: @book }
+        redirect_to books_path, notice: "Book was successfully created"
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
+        flash.now[:alert] = "Book was not created, title can't be blank"
+        render :new
       end
     end
-  end
 
   # PATCH/PUT /books/1 or /books/1.json
   def update
@@ -73,6 +72,6 @@ class BooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_params
-      params.require(:book).permit(:title)
+      params.require(:book).permit(:title, :author, :price, :published_date)
     end
 end
