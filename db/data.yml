@@ -1,0 +1,32 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2025-01-28 19:54:48.053742000 Z
+    - 2025-01-28 19:54:48.053742000 Z
+
+---
+books:
+  columns:
+  - id
+  - title
+  - created_at
+  - updated_at
+  - author
+  - price
+  - published_date
+  records: 
+  - - 12
+    - wefnio
+    - 2025-01-29 03:57:57.115329000 Z
+    - 2025-01-29 03:58:15.308921000 Z
+    - wefwe
+    - !ruby/object:BigDecimal 18:0.1e4
+    - '2025-01-06'

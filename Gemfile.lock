@@ -81,6 +81,7 @@ GEM
     crass (1.0.6)
     date (3.4.1)
     diff-lcs (1.4.4)
+    docile (1.4.1)
     erubi (1.13.1)
     ffi (1.17.1)
     globalid (1.2.1)
@@ -202,6 +203,12 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.1.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.1)
+    simplecov_json_formatter (0.1.4)
     spring (4.2.1)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -239,6 +246,9 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yaml_db (0.7.0)
+      rails (>= 3.0)
+      rake (>= 0.8.7)
     zeitwerk (2.6.18)
 
 PLATFORMS
@@ -259,12 +269,14 @@ DEPENDENCIES
   rspec-rails (~> 5.0.0)
   sass-rails (>= 6)
   selenium-webdriver
+  simplecov
   spring
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
+  yaml_db
 
 RUBY VERSION
    ruby 3.0.2p107
